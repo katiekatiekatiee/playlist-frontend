@@ -1,3 +1,3 @@
 class Song {
-    
+    static all = []
 }
