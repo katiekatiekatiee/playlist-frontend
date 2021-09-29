@@ -9,4 +9,8 @@ class Song {
 
         Song.all.push(this)
     }
+
+    render() {
+    
+    }
 }
