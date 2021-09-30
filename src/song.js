@@ -42,12 +42,19 @@ class Song {
         }
     }
 
-  
+    editSong() {
+        const div = this.element.querySelector('div');
+          for(const element of div.children) {
+            let inputValue = element.innerText;
+            let name = element.classList[0];
+            element.outerHTML = `<input type="text" class="edit-${name}" value="${inputValue}" />`
+        }
+    }
 
     saveUpdatedSong() {
         this.title = this.element.querySelector(".edit-title").value;
         this.artist = this.element.querySelector(".edit-artist").value;
        
-        songApi.updateItem(this)
+        songApi.updateSong(this)
    }
 }
