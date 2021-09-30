@@ -6,10 +6,13 @@ class Song {
         this.artist = artist;
         this.id = id;
         this.playlist_id = playlistId;
+        this.element = document.createElement("div");
+        this.element.id = `song-${this.id}`;
 
-        Song.all.push(this)
+        Song.all.push(this);
     }
 
+    
     render() {
     
     }
