@@ -41,4 +41,13 @@ class Song {
             this.saveUpdatedSong(e.target)
         }
     }
+
+  
+
+    saveUpdatedSong() {
+        this.title = this.element.querySelector(".edit-title").value;
+        this.artist = this.element.querySelector(".edit-artist").value;
+       
+        songApi.updateItem(this)
+   }
 }
