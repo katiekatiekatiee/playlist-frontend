@@ -7,9 +7,10 @@ class Song {
         this.artist = artist;
         this.id = id;
         this.playlist_id = playlistId;
-        this.element = document.createElement("div");
+        this.element = document.createElement("li");
         this.element.id = `song-${this.id}`;
         this.element.dataset['id'] = id;
+        this.element.addEventListener('click', this.handleClick)
 
         Song.all.push(this);
     }
@@ -26,5 +27,18 @@ class Song {
        <button class="delete" data-id= "${this.id}" >Delete</button>
        `
        return this.element
+    }
+
+    handleClick = (e) => {
+        if(e.target.innerText === "Delete"){
+            itemApi.deleteSong(e)
+    
+        } else if(e.target.innerText === "Edit") {
+            e.target.innerText = "Save"
+            this.editSong(e.target)
+        } else if(e.target.innerText === "Save") {
+            e.target.innerText = "Edit"
+            this.saveUpdatedSong(e.target)
+        }
     }
 }
