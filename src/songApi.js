@@ -4,11 +4,12 @@ class SongApi {
     }
 
     getSongs() {
-        fetch(`${this.port}/songs`)
+        fetch(this.baseURL)
         .then(response => response.json())
         .then(json => {
             json.forEach(s => {
                 const n = new Song(s)
+                n.renderSong();
             })
         })
     }

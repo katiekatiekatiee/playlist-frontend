@@ -29,6 +29,10 @@ class Song {
        return this.element
     }
 
+    renderSong(){
+        Song.container.appendChild(this.render())
+    }
+
     handleClick = (e) => {
         if(e.target.innerText === "Delete"){
             itemApi.deleteSong(e)
