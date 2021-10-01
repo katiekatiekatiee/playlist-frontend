@@ -1,6 +1,6 @@
 class PlaylistApi {
     constructor(port){
-        this.port = port
+        this.baseUrl = `${port}/playlists`
     }
 
     getPlaylists() {

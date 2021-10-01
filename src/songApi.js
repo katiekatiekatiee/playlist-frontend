@@ -1,6 +1,6 @@
 class SongApi {
     constructor(port){
-        this.port = port
+        this.baseUrl = `${port}/songs`
     }
 
     getSongs() {
