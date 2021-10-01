@@ -4,10 +4,10 @@ class PlaylistApi {
     }
 
     getPlaylists() {
-        fetch(`${this.port}/playlists`)
+        fetch(this.baseUrl)
         .then(response => response.json())
         .then(json => {
-            json.forEach(p => {
+            json["data"].forEach(p => {
                 const n = new Playlist(p)
                 n.addToDom()
             })

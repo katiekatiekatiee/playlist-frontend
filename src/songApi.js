@@ -7,22 +7,22 @@ class SongApi {
         fetch(this.baseURL)
         .then(response => response.json())
         .then(json => {
-            json.forEach(s => {
+            json["data"].forEach((s) => {
                 const n = new Song(s)
                 n.renderSong();
             })
         })
     }
 
-    createSongs() {
+    // createSongs() {
 
-        const songInfo = {
-            song:{
-            title: titleInput.value,
-            artist: artistInput.value,
+    //     const songInfo = {
+    //         song:{
+    //         title: titleInput.value,
+    //         artist: artistInput.value,
             
-            playlistName: playlistInput.value
-            }
-        }
+    //         playlistName: playlistInput.value
+    //         }
+    //     }
     
 }
