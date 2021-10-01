@@ -4,9 +4,12 @@ const songApi = new SongApi(port);
 
 const songForm = document.getElementById('song-form');
 
-const titleValue = document.getElementById('song-title');
-const artistValue = document.getElementById('song-artist');
+const titleInput = document.getElementById('song-title');
+const artistInput= document.getElementById('song-artist');
 
-
+const playlistInput = document.getElementById('playlist-id')
 // const playlistForm = document.getElementById('playlist-form')
+
+
+
 

@@ -13,4 +13,16 @@ class SongApi {
             })
         })
     }
+
+    createSongs() {
+
+        const songInfo = {
+            song:{
+            title: titleInput.value,
+            artist: artistInput.value,
+            
+            playlistName: playlistInput.value
+            }
+        }
+    
 }
