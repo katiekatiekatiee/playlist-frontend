@@ -4,9 +4,12 @@ class SongApi {
     }
 
     getSongs() {
-        fetch(this.baseURL)
+        // debugger
+        fetch(this.baseUrl)
         .then(response => response.json())
+        
         .then(json => {
+            // debugger
             json["data"].forEach((s) => {
                 const n = new Song(s)
                 n.renderSong();

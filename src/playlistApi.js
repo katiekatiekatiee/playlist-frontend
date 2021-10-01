@@ -9,7 +9,7 @@ class PlaylistApi {
         .then(json => {
             json["data"].forEach(p => {
                 const n = new Playlist(p)
-                n.addToDom()
+                // n.addToDom()
             })
         })
     }
