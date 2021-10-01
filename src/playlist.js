@@ -14,4 +14,9 @@ class Playlist {
         this.element.id = `playlist-${this.id}`
         return this.element
     }
+
+    addToDom(){
+        Playlist.playlistContainer.append(this.render())
+    }
+
 }
