@@ -47,6 +47,14 @@ class SongApi {
    
     }
 
+    deleteComment(e) {
+        const id = e.target.dataset.id
+        e.target.parentElement.remove()
+        fetch(`${this.baseUrl}/${id}`, {method: 'DELETE'})
+        .then(resp => resp.json())
+        .then(json => alert(json.message))
+    }
+
    
 }
 
