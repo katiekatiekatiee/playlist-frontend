@@ -19,7 +19,7 @@ class Song {
     render() {
         this.element.innerHTML = `
         <div>
-       $<span class="title">${this.title}</span>
+       <span class="title">${this.title}</span>
         <span class="artist">${this.artist}</span>
        </div>
        

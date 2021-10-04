@@ -19,4 +19,11 @@ class Playlist {
         Playlist.playlistContainer.append(this.render())
     }
 
+    addToDropDown() {
+        const option = document.createElement('option')
+        option.value  = this.id 
+        option.innerText = this.title
+        dropdown.append(option)
+    }
+
 }
