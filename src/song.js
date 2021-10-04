@@ -35,7 +35,7 @@ class Song {
 
     handleClick = (e) => {
         if(e.target.innerText === "Delete"){
-            itemApi.deleteSong(e)
+            songApi.deleteSong(e)
     
         } else if(e.target.innerText === "Edit") {
             e.target.innerText = "Save"

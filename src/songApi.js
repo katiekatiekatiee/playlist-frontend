@@ -12,20 +12,41 @@ class SongApi {
             // debugger
             json["data"].forEach((s) => {
                 const n = new Song(s)
-                n.renderSong();
+                n.attachToDom();
             })
         })
+
     }
 
-    // createSongs() {
+    createSongs() {
 
-    //     const songInfo = {
-    //         song:{
-    //         title: titleInput.value,
-    //         artist: artistInput.value,
+        const songInfo = {
+            song:{
+            title: titleInput.value,
+            artist: artistInput.value,
             
-    //         playlistName: playlistInput.value
-    //         }
-    //     }
-    
+            playlist_id: dropDown.value
+            }
+        }
+
+        const configObject = {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify(commentInfo)
+        }
+        
+        fetch(this.baseUrl, configObject)
+        .then(response => response.json())
+        .then(data => {
+            const c = new Song(data)
+            c.attachToDom()
+        })
+   
+    }
+
+   
 }
+

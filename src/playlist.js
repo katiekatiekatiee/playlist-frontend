@@ -21,9 +21,9 @@ class Playlist {
 
     addToDropDown() {
         const option = document.createElement('option')
-        option.value  = this.id 
-        option.innerText = this.title
-        dropdown.append(option)
+        option.value  = this.id; 
+        option.innerText = this.title;
+        dropDown.appendChild(option);
     }
 
 }

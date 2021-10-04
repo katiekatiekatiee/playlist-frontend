@@ -10,6 +10,8 @@ const artistInput= document.getElementById('song-artist');
 const playlistInput = document.getElementById('playlist-id');
 // const playlistForm = document.getElementById('playlist-form')
 
+const dropDown = document.getElementById("playlist-dropdown");
+
 // songForm.addEventListener('submit', handleSubmit);
 
 
