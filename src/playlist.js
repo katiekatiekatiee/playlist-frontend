@@ -7,6 +7,7 @@ class Playlist {
         this.description = description;
         this.id = id;
         // this.songs = songs;
+        Playlist.all.push(this)
     }
 
     render(){

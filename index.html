@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <script defer src="src/playlist.js"></script>
     <script defer src="src/playlistApi.js"></script>
     <script defer src="src/song.js"></script>
@@ -15,6 +15,10 @@
 
 </head>
 <body>
+
+    <div id="songs"></div>
+    <div id="playlist-container"></div>
+
    <h2>Add a song to a playlist:</h2>
    <form id="song-form">
        <label for="song-title">Song Title:</label>
@@ -26,9 +30,6 @@
 
        <input type="submit" value="Add Song" />
    </form>
-
-    <div id="songs"></div>
-    <div id="playlist-container"></div>
 
  
 </body>
