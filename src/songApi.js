@@ -11,7 +11,8 @@ class SongApi {
         .then(json => {
             // debugger
             json["data"].forEach((s) => {
-                const n = new Song(s)
+                const n = new Song({id: s.id, ...s.attributes})
+                // debugger
                 n.attachToDom();
             })
         })

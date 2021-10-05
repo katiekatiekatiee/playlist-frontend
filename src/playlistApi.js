@@ -8,9 +8,9 @@ class PlaylistApi {
         .then(response => response.json())
         .then(json => {
             json["data"].forEach(p => {
-                const n = new Playlist(p)
+                const n = new Playlist({id: p.id, ...p.attributes})
                 n.addToDom()
-                c.addToDropDown()
+                n.addToDropDown()
             })
         })
     }

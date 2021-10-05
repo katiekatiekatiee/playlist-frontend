@@ -61,4 +61,8 @@ class Song {
        
         songApi.updateSong(this)
    }
+
+   attachToDom(){
+        Song.container.appendChild(this.render())
+    }
 }
