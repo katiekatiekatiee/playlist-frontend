@@ -18,7 +18,7 @@ class Song {
 
     render() {
         this.element.innerHTML = `
-        <div>
+        <div data-id="${this.id}">
        <span class="title">${this.title}</span>
         <span class="artist">${this.artist}</span>
        </div>

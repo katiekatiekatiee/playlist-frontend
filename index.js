@@ -12,14 +12,13 @@ const playlistInput = document.getElementById('playlist-id');
 
 const dropDown = document.getElementById("playlist-dropdown");
 
-// songForm.addEventListener('submit', handleSubmit);
+songForm.addEventListener('submit', handleSubmit);
 
 
-// function handleSubmit(e){
-//     e.preventDefault();
-//     songApi.createSong();
-//     e.target.reset();
-// }
+function handleSubmit(e){
+    e.preventDefault();
+    songApi.createSong();
+}
 // debugger
 songApi.getSongs();
 playlistApi.getPlaylists();

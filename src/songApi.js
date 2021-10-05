@@ -47,7 +47,7 @@ class SongApi {
    
     }
 
-    deleteComment(e) {
+    deleteSong(e) {
         const id = e.target.dataset.id
         e.target.parentElement.remove()
         fetch(`${this.baseUrl}/${id}`, {method: 'DELETE'})
