@@ -36,7 +36,7 @@ class SongApi {
                     "Content-Type": "application/json",
                     Accept: "application/json"
                 },
-                body: JSON.stringify(commentInfo)
+                body: JSON.stringify(songInfo)
         }
         
         fetch(this.baseUrl, configObject)
