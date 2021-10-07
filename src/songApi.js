@@ -19,7 +19,7 @@ class SongApi {
 
     }
 
-    createSongs() {
+    createSong() {
 
         const songInfo = {
             song:{
@@ -44,8 +44,9 @@ class SongApi {
         .then(data => {
             const c = new Song(data)
             c.attachToDom()
+            c.render()
         })
-   
+        
     }
 
     updateSong(song){

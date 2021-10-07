@@ -6,10 +6,10 @@ class Playlist {
         this.title = title;
         this.description = description;
         this.id = id;
-        this.element = document.createElement("li");
+        this.element = document.createElement("div");
         this.element.dataset['id'] = id;
         this.element.addEventListener('click', this.showSongs);
-        // this.songs = songs;
+       
         Playlist.all.push(this)
     }
 
