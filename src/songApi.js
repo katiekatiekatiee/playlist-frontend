@@ -13,7 +13,7 @@ class SongApi {
             json["data"].forEach((s) => {
                 const n = new Song({id: s.id, ...s.attributes})
                 // debugger
-                n.attachToDom();
+                // n.attachToDom();
             })
         })
 

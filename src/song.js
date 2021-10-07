@@ -2,11 +2,11 @@ class Song {
     static all = []
     static container = document.getElementById(`songs-container`)
 
-    constructor({title, artist, id, playlistId}) {
+    constructor({title, artist, id, playlist_id}) {
         this.title = title;
         this.artist = artist;
         this.id = id;
-        this.playlist_id = playlistId;
+        this.playlistId = playlist_id;
         this.element = document.createElement("li");
         this.element.id = `song-${this.id}`;
         this.element.dataset['id'] = id;
@@ -16,8 +16,9 @@ class Song {
     }
 
 
-    render() {
-        this.element.innerHTML = `
+    render(e) {
+        // debugger
+        e.querySelector('ul').innerHTML += `
         <div data-id="${this.id}">
        <span class="title">${this.title}</span>
         <span class="artist">${this.artist}</span>
