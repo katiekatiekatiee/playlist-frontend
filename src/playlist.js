@@ -26,8 +26,10 @@ class Playlist {
             // debugger
             // e.target.querySelector('ul').innerHTML += `${song.title} - ${song.artist}`
         })
-
+        Song.renderForm(e.target)
     }
+
+   
 
     render(){
         // debugger
