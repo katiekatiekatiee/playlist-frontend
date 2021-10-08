@@ -1,0 +1,30 @@
+button {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #0F4137;
+    color: #12776F;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, Verdana, sans-serif;;
+  }
+
+body {
+    background-color: #D9CAB3;
+    color: #152D35;
+    text-align: center;
+
+}
+
+h1 {
+    color: #152D35;
+}
+
+h2 {
+    color: #152D35;
+}
+
+h3 {
+    color: #152D35;
+}

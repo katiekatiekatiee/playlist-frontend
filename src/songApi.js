@@ -25,7 +25,7 @@ class SongApi {
             title: titleInput.value,
             artist: artistInput.value,
             
-            // playlist_id: dropDown.value
+            playlist_id: dropDown.value
             }
         }
 

@@ -15,6 +15,8 @@ class Playlist {
 
     showSongs = (e) => {
         e.stopPropagation()
+        // e.cancelBubble() = true;
+        // e.stopImmediatePropagation();
        const playId = e.target.dataset.id
        const songsFilter = Song.all.filter(song => {
         // debugger
