@@ -7,6 +7,7 @@ class Song {
         this.artist = artist;
         this.id = id;
         this.playlistId = playlist_id;
+        
         this.element = document.createElement("li");
         this.element.id = `song-${this.id}`;
         this.element.dataset['id'] = id;

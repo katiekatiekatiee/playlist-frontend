@@ -22,5 +22,5 @@ function handleSubmit(e){
 }
 // debugger
 
-songApi.getSongs();
+// songApi.getSongs();
 playlistApi.getPlaylists();

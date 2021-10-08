@@ -2,10 +2,13 @@ class Playlist {
     static all = []
     static playlistContainer = document.getElementById('playlist-container')
 
-    constructor({title, description, id}) {
+    constructor({title, description, id, songs}) {
         this.title = title;
         this.description = description;
         this.id = id;
+        this.songs = [
+            songs.map(song => new Song(song))
+        ]
         this.element = document.createElement("div");
         this.element.dataset['id'] = id;
         this.element.addEventListener('click', this.showSongs);

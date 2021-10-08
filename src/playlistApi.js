@@ -6,11 +6,11 @@ class PlaylistApi {
     getPlaylists() {
         fetch(this.baseUrl)
         .then(response => response.json())
-        .then(json => {
-            json["data"].forEach(p => {
-                const n = new Playlist({id: p.id, ...p.attributes})
-                n.addToDom()
-                n.addToDropDown()
+        .then(data => {
+            data.map(playlist => {
+                const p = new Playlist(playlist);
+                p.addToDom();
+                p.addToDropDown()
             })
         })
     }
