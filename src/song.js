@@ -39,7 +39,7 @@ class Song {
             <label for="song-artist">Song Artist:</label>
             <input type="text" name="artist" class="song-artist"/> <br>
      
-            <select name="playlist_id" id="playlist-dropdown"></select><br>
+           
      
             <input type="submit" value="Add Song" />
         </form>`
@@ -47,11 +47,13 @@ class Song {
     }
 
     static addSong(e){ 
+        // debugger
+        e.preventDefault();
         let listId = e.target.parentElement.dataset.id
-        let title = e.target.querySelector('.song-title').value
-        let artist =  e.target.querySelector('.song-artist').value
-        // Song.attributes = {title: title, artist: artist, playlist_id: listId}
-        // const n = new Song({id: s.id, ...s.attributes})
+        let title = e.target.children[1].value
+        let artist =  e.target.children[4].value
+
+        songApi.createSong(listId, title, artist, e.target)
     }
     // renderSong(){
     //     Song.container.appendChild(this.render())
@@ -88,7 +90,7 @@ class Song {
 //         songApi.updateSong(this)
 //    }
 
-   attachToDom(){
-        Song.container.appendChild(this.render())
-    }
+//    attachToDom(){
+//         Song.container.appendChild(this.render())
+//     }
 }

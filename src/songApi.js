@@ -11,24 +11,24 @@ class SongApi {
         .then(json => {
             
             json["data"].forEach((s) => {
-                const n = new Song({id: s.id, ...s.attributes})
-               
+                const n = new Song(s)
+               debugger
             })
         })
 
     }
 
-    createSong() {
+    createSong(listId, title, artist, form) {
 
         const songInfo = {
             song:{
-            title: titleInput.value,
-            artist: artistInput.value,
+            title: title,
+            artist: artist,
             
-            playlist_id: dropDown.value
+            playlist_id: listId
             }
         }
-
+// debugger
         const configObject = {
                 method: 'POST',
                 headers: {
@@ -41,10 +41,12 @@ class SongApi {
         fetch(this.baseUrl, configObject)
         .then(response => response.json())
         .then(data => {
-            const n = new Song({id: data.data.id, ...data.data.attributes})
-           
-            n.attachToDom()
-            n.render()
+            // debugger
+            const n = new Song(data)
+            
+            // n.attachToDom()
+            n.render(form.parentElement)
+            form.reset();
         })
         
     }

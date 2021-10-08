@@ -10,7 +10,7 @@ class PlaylistApi {
             data.map(playlist => {
                 const p = new Playlist(playlist);
                 p.addToDom();
-                p.addToDropDown()
+                // p.addToDropDown()
             })
         })
     }
