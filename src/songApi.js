@@ -12,7 +12,7 @@ class SongApi {
             
             json["data"].forEach((s) => {
                 const n = new Song(s)
-               debugger
+            //    debugger
             })
         })
 
@@ -54,7 +54,8 @@ class SongApi {
     deleteSong(e) {
        
         const id = e.target.dataset.id
-        e.target.parentElement.remove()
+        e.target.previousElementSibling.remove();
+        e.target.remove();
         fetch(`${this.baseUrl}/${id}`, {method: 'DELETE'})
         .then(resp => resp.json())
         .then(json => alert(json.message))

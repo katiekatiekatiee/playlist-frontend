@@ -25,7 +25,7 @@ class Song {
         <span class="artist">Artist: ${this.artist}</span>
        </div>
 
-       <button class="delete" data-id= "${this.id}" >Delete</button>
+       <button class="delete" data-id= "${this.id}"> Delete </button>
        `
        return this.element
     }
@@ -44,6 +44,7 @@ class Song {
             <input type="submit" value="Add Song" />
         </form>`
         e.addEventListener('submit', Song.addSong)
+        e.addEventListener('click', Song.handleClick)
     }
 
     static addSong(e){ 
@@ -55,13 +56,16 @@ class Song {
 
         songApi.createSong(listId, title, artist, e.target)
     }
+    
     // renderSong(){
     //     Song.container.appendChild(this.render())
     // }
 
-    handleClick = (e) => {
+   static handleClick = (e) => {
+        // debugger
         
-        if(e.target.innerText === "Delete"){
+        // if(e.target.innerText === "Delete"){
+            if(e.target.classList[0] === 'delete'){
             // debugger
             songApi.deleteSong(e)
     
