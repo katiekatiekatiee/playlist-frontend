@@ -17,7 +17,7 @@ class Playlist {
     }
 
     showSongs = (e) => {
-        e.stopPropagation()
+        // e.stopPropagation();
         // e.cancelBubble() = true;
         // e.stopImmediatePropagation();
        const playId = e.target.dataset.id
@@ -26,12 +26,13 @@ class Playlist {
        return song.playlistId === parseInt(playId)
     })
         // debugger
+        // e.stopPropagation()
         songsFilter.forEach( song => {
             song.render(e.target)
             // debugger
             // e.target.querySelector('ul').innerHTML += `${song.title} - ${song.artist}`
         })
-        Song.renderForm(e.target)
+        Song.renderForm(e.target);
     }
 
    

@@ -1,3 +1,11 @@
+html {
+    background: linear-gradient(200deg, #F9F3DF, #FFDEFA, #CDF2CA);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height: 100%;
+    min-height: 100%;
+}
+
 button {
     background-color: white;
     border-radius: 10px 10px 10px 10px;
@@ -11,14 +19,16 @@ button {
   }
 
 body {
-    background-color: #D9CAB3;
-    color: #152D35;
+    /* background-color: #D9CAB3; */
+    /* background-color: white; */
+    /* background-size: 50%; */
+    color: #082032;
     text-align: center;
 
 }
 
 h1 {
-    color: #152D35;
+    color: #916BBF;
 }
 
 h2 {
@@ -26,5 +36,6 @@ h2 {
 }
 
 h3 {
-    color: #152D35;
+    color: #3D2C8D;
 }
+

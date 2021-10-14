@@ -19,6 +19,7 @@ class Song {
 
     render(e) {
         // debugger
+        // e.stopPropagation();
         e.querySelector('ul').innerHTML += `
         <div data-id="${this.id}">
        <span class="title">Song: ${this.title}</span> -- 
