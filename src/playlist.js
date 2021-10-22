@@ -22,23 +22,20 @@ class Playlist {
         // e.stopImmediatePropagation();
        const playId = e.target.dataset.id
        const songsFilter = Song.all.filter(song => {
-        // debugger
        return song.playlistId === parseInt(playId)
     })
         // debugger
-        // e.stopPropagation()
         songsFilter.forEach( song => {
             song.render(e.target)
             // debugger
             // e.target.querySelector('ul').innerHTML += `${song.title} - ${song.artist}`
         })
         Song.renderForm(e.target);
+        
     }
 
-   
-
     render(){
-        // debugger
+        
         this.element.innerHTML = `${this.title}
         <ul class="songsList"></ul>`
         // debugger
@@ -51,11 +48,11 @@ class Playlist {
         Playlist.playlistContainer.append(this.render())
     }
 
-    addToDropDown() {
-        const option = document.createElement('option')
-        option.value  = this.id; 
-        option.innerText = this.title;
-        dropDown.appendChild(option);
-    }
+    // addToDropDown() {
+    //     const option = document.createElement('option')
+    //     option.value  = this.id; 
+    //     option.innerText = this.title;
+    //     dropDown.appendChild(option);
+    // }
 
 }

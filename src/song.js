@@ -32,6 +32,7 @@ class Song {
     }
 
     static renderForm(e) {
+        // debugger
         e.innerHTML += 
        ` <h2>Add a song to a playlist:</h2>
         <form id="song-form">

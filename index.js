@@ -15,11 +15,11 @@ const artistInput= document.getElementById('song-artist');
 // songForm.addEventListener('submit', handleSubmit);
 
 
-function handleSubmit(e){
-    e.preventDefault();
-    // debugger
-    songApi.createSong();
-}
+// function handleSubmit(e){
+//     e.preventDefault();
+//     // debugger
+//     songApi.createSong();
+// }
 // debugger
 
 // songApi.getSongs();
